@@ -1,4 +1,4 @@
-class Api::V1::EmployeesController < ApiController
+class Api::V1::EmployeesController < Api::V1::ApiController
   before_action :set_employee, only: [:show]
 
   # ActiveRecordのレコードが見つからなければ404 not foundを応答する
@@ -7,7 +7,7 @@ class Api::V1::EmployeesController < ApiController
   end
 
   def index
-    employees = Employee.all
+    employees = Employee.select(:id, :name, :department, :gender)
     render json: employees
   end
 

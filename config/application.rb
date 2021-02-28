@@ -19,4 +19,5 @@ module TeamBot
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
   end
+  # https://qiita.com/tatsurou313/items/4f18c0d4d231e2fb55f4
 end
